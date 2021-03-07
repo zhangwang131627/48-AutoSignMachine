@@ -57,7 +57,7 @@ jobs:
         path: |
           node_modules
           */*/node_modules
-        key: ${{ runner.os }}-depends-${{ hashFiles('**/package-lock.json') }}
+        key: ${{ runner.os }}-depends-${{ hashFiles('**/package-lock.json') }} --tryrun
 
     - name: restore task cache
       uses: actions/cache@v2
