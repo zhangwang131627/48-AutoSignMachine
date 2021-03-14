@@ -70,7 +70,7 @@ let scheduler = {
             let options = tasks[taskName].options || {}
             let willTime = moment(randomDate(options));
             // 任务的随机延迟时间
-            let waitTime = options.dev ? 0 : Math.floor(Math.random() * (options.waitTime || 100))
+            let waitTime = options.dev ? 0 : Math.floor(Math.random() * (options.waitTime || 50))
             if (options) {
                 if (options.isCircle || options.dev) {
                     willTime = moment().startOf('days');
@@ -292,7 +292,7 @@ let scheduler = {
 
             // 任务执行
             // 多个任务同时执行会导致日志记录类型错误，所以仅在tryRun模式开启多个任务并发执行
-            let concurrency = scheduler.isTryRun ? 10 : 10
+            let concurrency = scheduler.isTryRun ? 50 : 50
             let queue = new PQueue({ concurrency });
             console.info('调度任务中', '并发数', concurrency)
             for (let task of will_tasks) {
