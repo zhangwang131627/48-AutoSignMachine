@@ -351,7 +351,7 @@ let scheduler = {
                             if (task.failNum > 3) {
                                 console.error('任务错误次数过多，停止该任务后续执行')
                                 let newTask = {
-                                    taskState: 2,
+                                    taskState: 40,
                                     taskRemark: '错误过多停止'
                                 }
                                 console.notify('任务错误次数过多，停止该任务后续执行')
