@@ -52,9 +52,9 @@ var start = async (params) => {
 
   await scheduler.regTask('dailyBookRead', async (request) => {
     // 首页-小说-阅读越有礼打卡赢话费
-    await require('./dailyBookRead').doTask(request, options)
-    await require('./dailyVideoBook').doTask(request, options)
-  }, taskOption)
+   // await require('./dailyBookRead').doTask(request, options)
+   // await require('./dailyVideoBook').doTask(request, options)
+//  }, taskOption)
 
   // 首页-小说-会员日活动-签到抽大奖
   await scheduler.regTask('dailyBookMemberDay', async (request) => {
@@ -80,9 +80,9 @@ var start = async (params) => {
   // })
 
   // 首页-小说-读满10章赢好礼
-  await scheduler.regTask('dailyBookRead10doDraw', async (request) => {
+ // await scheduler.regTask('dailyBookRead10doDraw', async (request) => {
     // 首页-小说-读满10章赢好礼
-    await require('./dailyVideoBook').read10doDraw(request, options)
+  //  await require('./dailyVideoBook').read10doDraw(request, options)
     // 首页-签到有礼-免流量得福利-3积分天天拿(阅读打卡) 已下线
     // await require('./dailyVideoBook').giftBoints(request, options)
   }, taskOption)
@@ -110,13 +110,13 @@ var start = async (params) => {
   })
 
   // 首页-签到有礼-免费领-浏览领积分
-  await scheduler.regTask('dailyLiuLan', async (request) => {
-    await require('./dailyTTliulan').doTask(request, options)
-  }, taskOption)
+//  await scheduler.regTask('dailyLiuLan', async (request) => {
+  //  await require('./dailyTTliulan').doTask(request, options)
+ // }, taskOption)
 
   // 首页-签到有礼-免费领-领免费霸王餐
-  await scheduler.regTask('dailyScratchCard', async (request) => {
-    await require('./dailyScratchCard').doTask(request, options)
+//  await scheduler.regTask('dailyScratchCard', async (request) => {
+   // await require('./dailyScratchCard').doTask(request, options)
   }, taskOption)
 
   // 首页-签到有礼-免费拿-看视频夺宝
@@ -191,9 +191,9 @@ var start = async (params) => {
   }, taskOption)
 
   // 首页-签到有礼-赚更多福利-天天抽好礼
-  await scheduler.regTask('dailylottery', async (request) => {
-    await require('./dailylottery').doTask(request, options)
-  }, taskOption)
+//  await scheduler.regTask('dailylottery', async (request) => {
+  //  await require('./dailylottery').doTask(request, options)
+//  }, taskOption)
 
   // 首页-游戏-娱乐中心-每日打卡
   await scheduler.regTask('producGameSignin', async (request) => {
@@ -225,9 +225,9 @@ var start = async (params) => {
   // await require('./integral').getCoins(request, options)
 
   // 每日评论积分
-  await scheduler.regTask('dailycomment', async (request) => {
-    await require('./commentSystem').commentTask(request, options)
-  }, taskOption)
+ // await scheduler.regTask('dailycomment', async (request) => {
+//    await require('./commentSystem').commentTask(request, options)
+ // }, taskOption)
 
   // 首页-游戏-娱乐中心-每日打卡-完成今日任务(200m)
   await scheduler.regTask('todayDailyTask', async (request) => {
@@ -285,9 +285,9 @@ var start = async (params) => {
   // })
 
   // 首页-知识-阅读答题赢好礼
-  await scheduler.regTask('dailyBookAnswer', async (request) => {
-    await require('./dailyBookAnswer').doTask(request, options)
-  }, taskOption)
+ // await scheduler.regTask('dailyBookAnswer', async (request) => {
+ //   await require('./dailyBookAnswer').doTask(request, options)
+//  }, taskOption)
 
   // 首页-积分乐园-集牛卡
   await scheduler.regTask('newYearUserSign', async (request) => {
@@ -320,10 +320,10 @@ var start = async (params) => {
   // }, taskOption)
 
   // 首页-签到有礼-免费领-饿了么红包
-  await scheduler.regTask('dailyUnicomTask', async (request) => {
-    await require('./dailyUnicomTask').doIntegralAd(request, options)
-    await require('./dailyUnicomTask').doTurnCard(request, options)
-  }, taskOption)
+ // await scheduler.regTask('dailyUnicomTask', async (request) => {
+   // await require('./dailyUnicomTask').doIntegralAd(request, options)
+ //   await require('./dailyUnicomTask').doTurnCard(request, options)
+//  }, taskOption)
 
   // 冬奥专区-赢冬奥纪念品-玩游戏抽奖
   await scheduler.regTask('olympicgame', async (request) => {
