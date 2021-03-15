@@ -91,7 +91,7 @@ let scheduler = {
                 taskName: taskName,
                 taskState: 0,
                 willTime: willTime.format('YYYY-MM-DD HH:mm:ss'),
-                waitTime: waitTime
+                waitTime: 20
             })
         }
         return queues
